@@ -1,5 +1,10 @@
 # 🍅 Pomodoro Timer
 
+<div align="center">
+  <img src="preview-light.png" width="649" height="957" />
+  <img src="preview-dark.png" width="649" height="957" />
+</div>
+
 A clean, modern desktop Pomodoro timer built with pure Python and Tkinter.
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
