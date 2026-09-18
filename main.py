@@ -42,7 +42,7 @@ FONT_NAME = "Segoe UI"
 FALLBACK_FONT = "Arial"
 
 WORK_MIN = 1
-SHORT_BREAK_MIN = 5
+SHORT_BREAK_MIN = 25
 LONG_BREAK_MIN = 20
 
 # ---------------------------- GLOBAL STATE ------------------------------- #
