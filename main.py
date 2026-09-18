@@ -1,8 +1,19 @@
 import math
 import platform
 import subprocess
+import sys
 from pathlib import Path
 from tkinter import *
+
+
+def resource_path(relative_path: str) -> Path:
+    """Get absolute path to resource — works in development and in PyInstaller .exe"""
+    if hasattr(sys, "_MEIPASS"):
+        # Running as a compiled executable
+        return Path(sys._MEIPASS) / relative_path
+    # Running as normal .py script
+    return Path(__file__).parent.resolve() / relative_path
+
 
 # ---------------------------- THEMES ------------------------------- #
 THEMES = {
@@ -41,8 +52,8 @@ colors = THEMES[current_theme]
 FONT_NAME = "Segoe UI"
 FALLBACK_FONT = "Arial"
 
-WORK_MIN = 1
-SHORT_BREAK_MIN = 25
+WORK_MIN = 25
+SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 
 # ---------------------------- GLOBAL STATE ------------------------------- #
@@ -253,8 +264,8 @@ def count_down(count):
 
 
 # ---------------------------- UI SETUP ------------------------------- #
-script_dir = Path(__file__).parent.resolve()
-tomato_path = script_dir / "tomato.png"
+tomato_path = resource_path("tomato.png")
+
 
 window = Tk()
 window.title("Pomodoro Timer")
