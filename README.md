@@ -14,24 +14,27 @@ A clean, modern desktop Pomodoro timer built with pure Python and Tkinter.
   - 25 minutes of focused work
   - 5-minute short break
   - 20-minute long break after 4 work sessions
-- **Modern dark UI** with refined color palette and clear visual hierarchy
+- **Pause & Resume** – interrupt a session and continue exactly where you left off
+- **Sound notification** when a session ends (works on Windows, macOS and Linux)
+- **Light / Dark theme toggle** – switch instantly with one click
+- **Modern UI** with refined color palette and clear visual hierarchy
 - **Session tracking** with check marks after each completed work block
-- **Smart button states** – Start is disabled while a timer is running
-- **Robust path handling** – works no matter where you launch the script from
-- **Zero extra dependencies** – only uses the Python standard library + Tkinter
+- **Smart button states** – controls enable/disable automatically
+- **Zero extra dependencies** – only Python standard library + Tkinter
 
 ---
 
-## Screenshots
+## Themes
 
-The app features a deep navy background, a vibrant tomato illustration, large readable timer, and clearly colored states:
+| Theme | Description |
+|-------|-------------|
+| **Dark** (default) | Deep navy background, mint / pink / red accents |
+| **Light** | Soft cream background (classic Pomodoro feel) |
 
-| State        | Color / Meaning          |
-|--------------|--------------------------|
-| Focus Time   | Mint green               |
-| Short Break  | Soft pink                |
-| Long Break   | Strong red               |
-| Idle         | Neutral off-white        |
+Phase colors stay consistent in both themes:
+- Focus → Green
+- Short Break → Pink
+- Long Break → Red
 
 ---
 
@@ -40,7 +43,7 @@ The app features a deep navy background, a vibrant tomato illustration, large re
 - Python 3.8 or higher
 - Tkinter (comes pre-installed with most Python distributions)
 
-> **Note:** On some Linux systems you may need to install Tkinter separately:
+> **Linux note:** If Tkinter is missing:
 > ```bash
 > sudo apt install python3-tk
 > ```
@@ -62,17 +65,27 @@ The app features a deep navy background, a vibrant tomato illustration, large re
    python main.py
    ```
 
-That's it — no `pip install` required.
+No `pip install` required.
 
 ---
 
 ## How to Use
 
-1. Click **START** to begin the first focus session.
-2. The timer will automatically cycle through:
-   - Work → Short Break → Work → Short Break → Work → Short Break → Work → Long Break
-3. After each completed work session a ✓ appears.
-4. Click **RESET** at any time to stop the timer and return to the idle state.
+| Button | Action |
+|--------|--------|
+| **START** | Begin a new focus session |
+| **PAUSE** | Temporarily stop the current countdown |
+| **RESUME** | Continue from the exact remaining time |
+| **RESET** | Stop everything and return to idle state |
+| **☀️ Light / 🌙 Dark** | Toggle between light and dark themes |
+
+The timer automatically cycles:
+
+```
+Work → Short Break → Work → Short Break → Work → Short Break → Work → Long Break
+```
+
+A short sound plays whenever a session finishes.
 
 ---
 
@@ -89,7 +102,7 @@ pomodoro-with-python/
 
 ## Customization
 
-You can easily change the timer lengths at the top of `main.py`:
+Open `main.py` and change the constants at the top:
 
 ```python
 WORK_MIN = 25
@@ -97,20 +110,37 @@ SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 ```
 
-Want a different look? Adjust the color constants in the same section.
+You can also tweak the color values inside the `THEMES` dictionary if you want a completely custom look.
 
 ---
 
-## Improvements over the original
+## Technical Notes
 
-- Modern dark theme with professional color palette
+### Sound
+- **Windows** → `winsound` (built-in)
+- **macOS** → system Glass sound via `afplay`
+- **Linux** → tries common free-desktop sounds, falls back to terminal bell
+
+### Pause / Resume
+The remaining seconds are stored when you pause, so resuming continues from the exact point you stopped.
+
+### Theme switching
+All widgets are recolored live — no restart needed.
+
+---
+
+## Improvements over the original course project
+
+- Pause & Resume functionality
+- Cross-platform sound notifications
+- Light / Dark theme toggle
+- Modern dark theme by default + classic light theme
 - Clear status messages that change with each phase
 - Session counter (“Session X / 4”)
-- Buttons that properly enable/disable
-- Consistent time formatting (`05:09` instead of `5:9`)
-- Cleaner code structure and safer global state handling
-- Robust file path resolution using `pathlib`
-- Better typography and spacing
+- Proper button state management
+- Consistent `MM:SS` time formatting
+- Robust file path resolution with `pathlib`
+- Cleaner global state handling
 
 ---
 
