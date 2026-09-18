@@ -8,7 +8,18 @@ A clean, modern desktop Pomodoro timer built with pure Python and Tkinter.
 
 ---
 
+## Download the App
+
+**No Python required.** Download the ready-to-run Windows executable:
+
+➡️ **[Download Pomodoro.exe](https://drive.google.com/file/d/12BpsugKvkXF6J2JDDiVeO1Vug4IE8Oz-/view)**
+
+Just download, double-click, and start focusing.
+
+---
+
 ## Features
+
 
 - **Classic Pomodoro cycle**
   - 25 minutes of focused work
@@ -52,14 +63,18 @@ Phase colors stay consistent in both themes:
 
 ## Installation & Usage
 
+### Option 1 – Download the executable (easiest)
+1. Go to the [Download link](https://drive.google.com/file/d/12BpsugKvkXF6J2JDDiVeO1Vug4IE8Oz-/view)
+2. Download `Pomodoro.exe`
+3. Double-click to run (no Python needed)
+
+### Option 2 – Run from source
 1. Clone the repository:
    ```bash
    git clone https://github.com/Souravbanerjeedata/pomodoro-with-python.git
    cd pomodoro-with-python
    ```
-
 2. Make sure `tomato.png` is in the same folder as `main.py`.
-
 3. Run the app:
    ```bash
    python main.py
