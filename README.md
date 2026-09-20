@@ -1,8 +1,8 @@
 # Pomodoro Timer
 
 <div align="center">
-  <img src="preview-start.png" width="625" height="1041" />
-  <img src="preview-running.png" width="625" height="768" />
+  <img src="preview-start.png" width="312.5" height="520.5" />
+  <img src="preview-running.png" width="312.5" height="384" />
 </div>
 
 A modern desktop Pomodoro timer built with pure Python and Tkinter.  
