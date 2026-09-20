@@ -1,7 +1,22 @@
 # Pomodoro Timer
 
+<div align="center">
+  <img src="preview-start.png" width="625" height="1041" />
+  <img src="preview-running.png" width="625" height="768" />
+</div>
+
 A modern desktop Pomodoro timer built with pure Python and Tkinter.  
 No extra packages — just the standard library.
+
+---
+
+## Download (Windows)
+
+**No Python required.** Download the ready-to-run executable:
+
+➡️ **[Download Pomodoro.exe](https://drive.google.com/file/d/16O4GgoBgJoenMfZkl88dHrLCJmN-UPNQ/view?usp=drive_link)**
+
+Download, double-click, and start focusing.
 
 ---
 
@@ -37,6 +52,13 @@ No extra packages — just the standard library.
 
 ## Requirements
 
+### Option A — Use the executable (easiest)
+
+- Windows only
+- No Python needed
+
+### Option B — Run from source
+
 - Python 3.8 or higher
 - Tkinter (included with most Python installs)
 
@@ -48,7 +70,7 @@ sudo apt install python3-tk
 
 ---
 
-## Run
+## Run from source
 
 ```bash
 python main.py
