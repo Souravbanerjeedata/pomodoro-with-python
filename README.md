@@ -1,23 +1,83 @@
-# Pomodoro Timer — Modern Edition
+# Pomodoro Timer
 
-A clean, fully configurable desktop Pomodoro timer built with pure Python and Tkinter.
+A modern desktop Pomodoro timer built with pure Python and Tkinter.  
+No extra packages — just the standard library.
+
+---
 
 ## Features
 
-- Editable work / short break / long break times and session count
-- Auto-start next phase toggle
-- Settings hide while the timer runs; window height shrinks to fit
-- Sound + priority popup notifications
-- Start / Pause / Resume / Reset / Skip
-- Scales to your screen size
-- Dark theme only
-- Zero extra dependencies (Python + Tkinter)
+- **Editable settings** before you start
+  - Work duration
+  - Short break
+  - Long break
+  - Sessions until long break
+  - Auto-start next phase (on/off)
+
+- **Settings hide while running** — window height shrinks to fit; settings return on Reset
+
+- **Notifications**
+  - Sound when a phase ends (Windows / macOS / Linux)
+  - Priority popup on top of other apps with session info and what’s next
+
+- **Controls**
+  - Start / Pause / Resume
+  - Reset
+  - Skip current phase
+
+- **Visual**
+  - Dark theme
+  - Scales to your screen size
+  - Rounded buttons
+  - Monospace timer font
+  - Session progress dots
+  - Phase-colored timer text
+
+---
+
+## Requirements
+
+- Python 3.8 or higher
+- Tkinter (included with most Python installs)
+
+**Linux** — if Tkinter is missing:
+
+```bash
+sudo apt install python3-tk
+```
+
+---
 
 ## Run
 
 ```bash
 python main.py
 ```
+
+---
+
+## Default cycle
+
+| Phase                 | Default |
+| --------------------- | ------- |
+| Focus                 | 25 min  |
+| Short break           | 5 min   |
+| Long break            | 20 min  |
+| Sessions → long break | 4       |
+
+Change any of these in the Settings panel before pressing **Start**.
+
+---
+
+## How it works
+
+1. Set your times and session count (optional).
+2. Choose whether the next phase should start automatically.
+3. Press **Start**.
+4. When a phase ends: sound + popup appear.
+5. Press **Reset** anytime to stop and edit settings again.
+
+---
 
 ## License
 
